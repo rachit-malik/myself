@@ -1508,6 +1508,14 @@ body {
   font-weight: var(--font-weight-medium);
   margin-bottom: var(--space-8);
 }
+.institution-logo {
+  height: 38px; /* Bigger logo */
+  width: auto;
+}
+.cert-title {
+  font-size: 1.5rem; /* Bigger title */
+}
+
 
 .specialization {
   color: var(--color-text-secondary);
@@ -1525,22 +1533,30 @@ body {
 /* Certifications Section */
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-24);
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); /* Bigger tiles */
+  gap: 28px; /* Slightly larger gap for bigger tiles */
 }
+
 
 .certification-card {
-  padding: var(--space-24);
+  padding: 32px; /* Larger padding for a bigger look */
+  border-radius: 22px; /* More rounded for a premium look */
+  box-shadow: rgba(0,0,0,0.10) 0 6px 18px;
+  font-size: 1.1rem; /* Slightly larger base font */
+  transition: box-shadow 0.3s cubic-bezier(.4,0,.2,1), transform 0.2s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.87);
+  backdrop-filter: blur(14px);
+  color: #1a1a1a;
   text-decoration: none;
-  color: inherit;
-  transition: var(--transition-spring);
+  cursor: pointer;
 }
 
+
 .certification-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0,0,0,0.18) 0 16px 36px;
+  transform: scale(1.025);
 }
 
 [data-color-scheme="dark"] .certification-card:hover {
@@ -1574,6 +1590,21 @@ body {
   font-weight: var(--font-weight-medium);
   display: inline-block;
   border: 1px solid rgba(0, 122, 255, 0.2);
+}
+
+.cert-category {
+  display: inline-block;
+  background-color: #007AFF;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 9999px;
+  font-size: 1.0rem;
+  font-weight: 700;
+  margin-top: 13px;
+  align-self: flex-start;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  letter-spacing: .03em;
+  line-height: 1.6;
 }
 
 /* Hobbies Section */
